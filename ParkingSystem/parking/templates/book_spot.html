@@ -1,0 +1,14 @@
+{% if error %}
+<p style="color: red;">{{ error }}</p>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    Vehicle Number: <input type="text" name="vehicle_number"><br>
+    Vehicle Type: 
+    <select name="vehicle_type">
+        <option value="TW">Two Wheeler</option>
+        <option value="FW">Four Wheeler</option>
+    </select><br>
+    <input type="submit" value="Book Spot">
+</form>
